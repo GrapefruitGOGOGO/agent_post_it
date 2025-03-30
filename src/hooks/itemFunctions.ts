@@ -23,6 +23,13 @@ export const itemTools = {
             return itemManager.deleteItem(args.id)
         }
     },
+    deleteAllItems: {
+        beforeLoadingText: '正在删除所有物品...',
+        afterLoadingText: '所有物品删除成功！继续执行任务...',
+        func: () => {
+            return itemManager.deleteAllItems()
+        }
+    },
     queryItems: {
         beforeLoadingText: '正在查询物品...',
         afterLoadingText: '物品查询成功！继续执行任务...',
@@ -139,6 +146,17 @@ export const tools = [
     {
         "type": "function",
         "function": {
+            "name": "deleteAllItems",
+            "description": "删除所有物品",
+            "parameters": {
+                "type": "object",
+                "properties": {}
+            }
+        }
+    },
+    {
+        "type": "function",
+        "function": {
             "name": "deleteItem",
             "description": "删除物品，应先查询queryItems，获取物品ID，然后调用此函数",
             "parameters": {
@@ -154,7 +172,7 @@ export const tools = [
         "type": "function",
         "function": {
             "name": "getExpiredItems",
-            "description": "获取过期物品列表",
+            "description": "获取过期物品列表，注意：这里只返回已经过期的物品，如果需要查看即将过期的物品，请使用queryItems函数",
             "parameters": {
                 "type": "object",
                 "properties": {}
@@ -172,13 +190,6 @@ export const tools = [
                     "threshold": { "type": "number", "description": "库存阈值" }
                 }
             }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "getCurrentTimestamp",
-            "description": "获取当前时间戳",
         }
     }
 ];

@@ -142,6 +142,13 @@ class ItemManager {
         return true;
     }
 
+    // 删除所有物品
+    public async deleteAllItems(): Promise<boolean> {
+        this.items = [];
+        this.saveItems();
+        return true;
+    }
+
     // 查询物品
     public async queryItems(condition: QueryCondition = {}): Promise<Item[]> {
         return this.items.filter(item => {
