@@ -6,7 +6,60 @@
 [![Ant Design Vue](https://img.shields.io/badge/Ant%20Design%20Vue-3.x-0170FE?logo=ant-design)](https://antdv.com/)
 [![Ant Design X Vue](https://img.shields.io/badge/Ant%20Design%20X%20Vue-1.x-0170FE?logo=ant-design)](https://antd-design-x-vue.netlify.app/)
 
+[English](README.md) | [中文](README.zh-CN.md)
+
 A smart home item management system with AI-powered chat interface, built with Vue 3 and TypeScript.
+
+## 🤖 AI Agent
+
+This project features an intelligent AI agent that can help you manage your household items through natural language conversations. The agent is built using OpenAI's Function Calling technology and can:
+
+- Understand natural language commands and questions
+- Perform CRUD operations on items
+- Provide smart suggestions and reminders
+- Handle complex queries with multiple conditions
+- Maintain context throughout the conversation
+- Format responses in a user-friendly way
+
+### Key Features of the AI Agent
+
+1. **Natural Language Understanding**
+
+   - Understands various ways of expressing the same intent
+   - Handles complex queries with multiple conditions
+   - Provides contextual responses
+
+2. **Function Calling**
+
+   - Seamlessly integrates with item management functions
+   - Handles multiple operations in a single conversation
+   - Maintains state between function calls
+
+3. **Smart Features**
+
+   - Expiration date tracking and reminders
+   - Low stock alerts
+   - Category-based organization
+   - Price tracking and analysis
+
+4. **User Experience**
+   - Real-time streaming responses
+   - Typing indicators
+   - Markdown formatting support
+   - Error handling and recovery
+
+### Example Interactions
+
+```
+User: Add a new item - milk, 2 bottles, price 5.99, expiry date next month
+Agent: I'll help you add the milk to your inventory...
+
+User: What items are expiring soon?
+Agent: Let me check your inventory for items nearing expiration...
+
+User: Where is my laptop?
+Agent: Let me search for your laptop in the inventory...
+```
 
 ## ⚠️ Security Warning
 
